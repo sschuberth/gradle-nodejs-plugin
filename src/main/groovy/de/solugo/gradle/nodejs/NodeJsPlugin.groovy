@@ -10,6 +10,8 @@ class NodeJsPlugin implements Plugin<Project> {
         project.extensions.create("nodejs", NodeJsExtension)
         project.nodejs.rootPath = project.projectDir.absolutePath
 
+        project.extensions.create("yarn", YarnExtension)
+
         project.ext.NodeJsTask = NodeJsTask
 
         final cleanTask = project.tasks.findByPath("clean")
